@@ -22,14 +22,14 @@ const reducer = (state,action) => {
         case "next":
             if(state.counter<4) {
                 if(data[state.counter].answer===data[state.counter].options[action.payload]){
-                    return{...state,counter:state.counter+1,score:state.score+10,result:state.result+"Correct! "}
+                    return{...state,counter:state.counter+1,score:state.score+10,result:"Correct!"}
             }            
                 return{...state,counter:state.counter+1,result:state.result+"Incorrect! "}}
             else {
                 if(data[state.counter].answer===data[state.counter].options[action.payload]){
-                    return{...state,showFinalScore:true,questionDisplay:false,score:state.score+10,time:0,result:state.result+"Correct! "}
+                    return{...state,showFinalScore:true,questionDisplay:false,score:state.score+10,time:0,result:"Correct!"}
             }
-                return {...state,showFinalScore:true,questionDisplay:false,time:0,result:state.result+"Incorrect "}}
+                return {...state,showFinalScore:true,questionDisplay:false,time:0,result:"Incorrect!"}}
         
         case "submit": return{...state,showFinalScore:false,showHighScore:true,scores:writeScore()}
         

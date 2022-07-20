@@ -13,9 +13,6 @@ function writeScore() {
 }
 
 
-
-
-
 const reducer = (state,action) => {
     switch (action.type) {
         case "start": return{...state,questionDisplay:action.payload,introDisplay:false}   
@@ -41,10 +38,6 @@ const reducer = (state,action) => {
     default:
         break;
   }
-
- 
-
-
 
 
 }
